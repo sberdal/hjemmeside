@@ -18,6 +18,8 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Icon from '@material-ui/core/Icon';
+import {Link} from 'react-router-dom';
+
 
 
 
@@ -138,7 +140,7 @@ class Menu extends React.Component {
           <Divider />
           <List>
             {['Play chess'].map((text) => (
-              <ListItem button key={text}>
+              <ListItem button key={text} component={Link} to="/chess">
                 <ListItemIcon className={classNames(classes.icon, 'fas fa-chess')} style={{ fontSize: 26 }} />
                 <ListItemText primary={text} />
               </ListItem>
