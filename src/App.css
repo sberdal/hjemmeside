@@ -22,11 +22,18 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.side-menu {
+
+}
+
+.side-menu {
+
+}
+
+.site-content {
+  padding-right: 25px;
+  height: 100%;
+  width: 100%;
+  margin: 25px 0 25px 25px;
+  overflow: scroll;
 }
