@@ -6,6 +6,10 @@ class Home extends React.Component {
     console.log(this.props.params);
   }
 
+  constructor(props) {
+    super(props);
+  }
+
   render(){
     return (
       <div>

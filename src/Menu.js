@@ -126,6 +126,7 @@ class Menu extends React.Component {
           </Toolbar>
         </AppBar>
         <Drawer
+          anchor="right"
           variant="permanent"
           classes={{
             paper: classNames(classes.drawerPaper, !this.state.open && classes.drawerPaperClose),

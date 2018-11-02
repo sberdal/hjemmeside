@@ -6,11 +6,8 @@ import App from './App';
 
 
 export default () => (
-  <React.Fragment>
     <Switch>
-      <Route exact path="/" component={App}/>
-      <Route path="/home" component={Home}/>
+      <Route exact path="/home" component={App}/>
       <Route path="/chess" component={Chess}/>
     </Switch>
-  </React.Fragment>
 );
