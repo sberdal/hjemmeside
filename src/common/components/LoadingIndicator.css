@@ -1,0 +1,8 @@
+.indicator {
+    z-index: 999999;
+    /*background: rgba(0, 17, 25, 0.05);*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

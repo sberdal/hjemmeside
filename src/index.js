@@ -7,22 +7,37 @@ import MuiThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import { styles } from "./styles"
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import rootReducer from './reducers'
 import App from './App';
 import Auth from './Auth/Auth';
+import {PersistGate} from 'redux-persist/integration/react'
+import {persistReducer, persistStore} from 'redux-persist'
+import LoadingIndicator from "./common/components/LoadingIndicator";
+import storage from "redux-persist/lib/storage";
+import reducer from './reducers';
+import labels from "./i18n/labels";
 
 
-export const store = createStore(rootReducer);
+const persistConfig = {
+  key: 'root',
+  storage,
+  whitelist: ['auth', 'labels'],
+};
+
+const persistedReducer = persistReducer(persistConfig, reducer);
+
+export const store = createStore(persistedReducer);
 
 export const authentication = new Auth();
 
 ReactDOM.render(
   <Provider store={store}>
+    <PersistGate loading={<LoadingIndicator/>} persistor={persistStore(store)}>
     <BrowserRouter>
       <MuiThemeProvider theme={styles}>
-        <App />
+        <App labels={labels}/>
       </MuiThemeProvider>
     </BrowserRouter>
+    </PersistGate>
   </Provider>,
   document.getElementById('root'));
 

@@ -3,17 +3,22 @@ import './App.css';
 import Menu from './Menu';
 import Routes from './Routes';
 import {connect} from "react-redux";
-import {compose} from "recompose";
 import {withRouter} from "react-router-dom";
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+  }
+
   render() {
+    const {labels} = this.props;
     return (
       <div className="main-container">
         <div className="content">
-          <Menu className='side-menu' />
+          <Menu className='side-menu' labels={labels}/>
           <div className='site-content'>
-            <Routes />
+            <Routes/>
           </div>
         </div>
       </div>);

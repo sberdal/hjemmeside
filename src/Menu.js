@@ -17,6 +17,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
 import Icon from '@material-ui/core/Icon';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -85,6 +86,7 @@ const styles = theme => ({
 });
 
 class Menu extends React.Component {
+
   state = {
     open : false,
   };
@@ -98,12 +100,12 @@ class Menu extends React.Component {
   };
 
   logInHandler() {
-      authentication.login();
+    authentication.login();
   }
 
   render() {
-    const { classes, theme } = this.props;
-
+    const { classes, theme} = this.props;
+    const labels = this.props.labels.labels.menu;
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -131,8 +133,8 @@ class Menu extends React.Component {
                   <ChevronRightIcon />
                 </IconButton>
               </Grid>
-              <Grid item style={{flex:1}}>
-                <Typography variant="h6" color="inherit" noWrap>
+              <Grid item style={{ flex : 1 }}>
+                <Typography variant="h6" color="inherit" noWrap id="page_title">
                   Home
                 </Typography>
               </Grid>
@@ -159,12 +161,14 @@ class Menu extends React.Component {
           </div>
           <Divider />
           <List>
-            {[ 'Play chess' ].map((text) => (
-              <ListItem button key={text} component={Link} to="/chess">
-                <ListItemIcon className={classNames(classes.icon, 'fas fa-chess')} style={{ fontSize : 26 }} />
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            <ListItem button key={labels.home} component={Link} to="/home">
+              <ListItemIcon><HomeIcon /></ListItemIcon>
+              <ListItemText primary={labels.home} />
+            </ListItem>
+            <ListItem button key={labels.chess} component={Link} to="/chess">
+              <ListItemIcon className={classNames(classes.icon, 'fas fa-chess')} style={{ fontSize : 26 }} />
+              <ListItemText primary={labels.chess} />
+            </ListItem>
           </List>
           <Divider />
           <List>
@@ -184,6 +188,7 @@ class Menu extends React.Component {
 Menu.propTypes = {
   classes : PropTypes.object.isRequired,
   theme : PropTypes.object.isRequired,
+  labels : PropTypes.object.isRequired,
 };
 
 export default withStyles(styles, { withTheme : true })(Menu);

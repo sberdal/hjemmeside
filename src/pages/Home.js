@@ -2,12 +2,8 @@ import React from 'react';
 
 class Home extends React.Component {
 
-  componentWillMount(){
-    console.log(this.props.params);
-  }
-
-  constructor(props) {
-    super(props);
+  componentDidMount(){
+    document.getElementById("page_title").innerHTML = this.props.labels.page_title;
   }
 
   render(){
