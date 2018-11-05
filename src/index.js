@@ -9,10 +9,12 @@ import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import rootReducer from './reducers'
 import App from './App';
+import Auth from './Auth/Auth';
 
 
-const store = createStore(rootReducer)
+export const store = createStore(rootReducer);
 
+export const authentication = new Auth();
 
 ReactDOM.render(
   <Provider store={store}>
