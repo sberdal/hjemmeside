@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 import Typography from "@material-ui/core/Typography";
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid/Grid';
+import {lineUp} from './defaultLineup';
 import WhitePawn from './pieces/WhitePawn';
 import WhiteBishop from './pieces/WhiteBishop';
 import WhiteKing from './pieces/WhiteKing';
 import WhiteKnight from './pieces/WhiteKnight';
 import WhiteQueen from './pieces/WhiteQueen';
 import WhiteRook from './pieces/WhiteRook';
-
 
 class Chess extends Component {
 
@@ -67,7 +67,7 @@ class Chess extends Component {
       width : this.state.tileSize,
       height : this.state.tileSize,
       clear : 'left',
-      textAlign: 'center'
+      textAlign : 'center'
     };
 
     const ylabelStyle = {
@@ -97,11 +97,11 @@ class Chess extends Component {
         let background = this.getSquareColor(y, x);
         if (x === 0) {
           tiles.push(
-            <div key={'square-$' + y + '-$' + x} className={'square ' + background} style={lastSquareInRowStyle}>
+            <div key={'square-$' + y + '-$' + x} id={8-y+String.fromCharCode(97+x)} className={'square ' + background} style={lastSquareInRowStyle}>
             </div>);
         } else {
           tiles.push(
-            <div key={'square-$' + y + '-$' + x} className={'square ' + background} style={squareStyle} />);
+            <div key={'square-$' + y + '-$' + x} id={8-y+String.fromCharCode(97+x)} className={'square ' + background} style={squareStyle} />);
         }
       }
       yLabels.push(<span style={ylabelStyle}>{this.state.tiles - y}</span>);
@@ -113,16 +113,14 @@ class Chess extends Component {
       }
     }
 
-    const pieces = () => {
-
-    }
-
     const boardStyle = {
       position : 'relative',
       overflow : 'hidden',
       height : (this.state.boardSize + this.state.tileSize),
       width : this.state.boardSize
     };
+
+    console.log(lineUp);
 
     return (
       <div className={"chess-board"}>
