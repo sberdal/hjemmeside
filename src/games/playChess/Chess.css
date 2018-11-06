@@ -1,0 +1,12 @@
+.square {
+    float: left;
+    position: relative;
+}
+
+.white {
+    background-color: sandybrown;
+}
+
+.black {
+    background-color: saddlebrown;
+}

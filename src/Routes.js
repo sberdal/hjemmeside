@@ -12,10 +12,13 @@ export default () => (
 
   <React.Fragment>
     <Switch>
+      <Route exact path="/" render={(props) => <WelcomePage {...props} labels={labels.labels.welcome_page} />} />
+
       <Route path="/home" render={(props) => <Home {...props} labels={labels.labels.home} />} />
       <Route path="/chess" render={(props) => <Chess {...props} labels={labels.labels.chess} />} />
+
+      
       <Route path="/**" render={(props) => <PageNotFound {...props} labels={labels.labels.page_not_found} />} />
-      <Route exact path="/*" render={(props) => <WelcomePage {...props} labels={labels.labels.welcome_page} />} />
     </Switch>
   </React.Fragment>
 );

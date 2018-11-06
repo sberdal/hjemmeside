@@ -17,7 +17,7 @@ class App extends Component {
       <div className="main-container">
         <div className="content">
           <Menu className='side-menu' labels={labels}/>
-          <div className='site-content'>
+          <div className='site-content' id={'siteContent'} >
             <Routes/>
           </div>
         </div>

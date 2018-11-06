@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import PropTypes from 'prop-types';
+import ChessBoard from '.././games/playChess/Chess';
 
 class Chess extends Component {
 
@@ -14,10 +15,7 @@ class Chess extends Component {
 
         <Grid container spacing={16}>
           <Grid item xs={12}>
-            <Typography>
-              {/*{labels.labels.chess.page_title}*/}
-              test
-            </Typography>
+            <ChessBoard labels={this.props.labels}/>
           </Grid>
 
         </Grid>
