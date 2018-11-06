@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 import Typography from "@material-ui/core/Typography";
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid/Grid';
+import WhitePawn from './pieces/WhitePawn';
+import WhiteBishop from './pieces/WhiteBishop';
+import WhiteKing from './pieces/WhiteKing';
+import WhiteKnight from './pieces/WhiteKnight';
+import WhiteQueen from './pieces/WhiteQueen';
+import WhiteRook from './pieces/WhiteRook';
 
-const labelStyles = { fontSize : 'calc(7px + .5vw)', position : 'absolute', userSelect : 'none' };
-const yLabelStyles = Object.assign({ justify:'center', left : '5%' }, labelStyles);
-const xLabelStyles = Object.assign({ bottom : '0%', right : '45%' }, labelStyles);
 
 class Chess extends Component {
 
@@ -18,7 +21,6 @@ class Chess extends Component {
       tiles : 8,
       tileSize : 0,
       boardSize : 0,
-      spacing : '16'
     };
 
     this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -64,24 +66,26 @@ class Chess extends Component {
     const lastSquareInRowStyle = {
       width : this.state.tileSize,
       height : this.state.tileSize,
-      clear : 'left'
+      clear : 'left',
+      textAlign: 'center'
     };
 
     const ylabelStyle = {
       width : this.state.tileSize,
       height : this.state.tileSize,
       float : 'right',
-      textAlign: 'center',
-      lineHeight: '350%'
+      clear : 'both',
+      textAlign : 'center',
+      lineHeight : '350%',
 
     };
 
     const xlabelStyle = {
       width : this.state.tileSize,
       height : this.state.tileSize,
-      float: 'left',
-      textAlign: 'center',
-      lineHeight: '350%'
+      float : 'left',
+      textAlign : 'center',
+      lineHeight : '350%',
     };
 
     const xFirst = {
@@ -93,39 +97,47 @@ class Chess extends Component {
         let background = this.getSquareColor(y, x);
         if (x === 0) {
           tiles.push(
-            <div key={'square-${y}-${x}'} class={'square ' + background} style={lastSquareInRowStyle}/>);
+            <div key={'square-$' + y + '-$' + x} className={'square ' + background} style={lastSquareInRowStyle}>
+            </div>);
         } else {
           tiles.push(
-            <div key={'square-${y}-${x}'} class={'square ' + background} style={squareStyle}/>);
+            <div key={'square-$' + y + '-$' + x} className={'square ' + background} style={squareStyle} />);
         }
       }
       yLabels.push(<span style={ylabelStyle}>{this.state.tiles - y}</span>);
 
-      if(y === 0) {
-        xLabels.push(<span style={{...xlabelStyle, ...xFirst}}>{String.fromCharCode(65 + y)}</span>);
+      if (y === 0) {
+        xLabels.push(<span style={{ ...xlabelStyle, ...xFirst }}>{String.fromCharCode(65 + y)}</span>);
       } else {
         xLabels.push(<span style={xlabelStyle}>{String.fromCharCode(65 + y)}</span>);
       }
     }
 
+    const pieces = () => {
 
-const boardStyle = { position : 'relative', display: 'inline-block', overflow : 'hidden', height : (this.state.boardSize + this.state.tileSize), width: this.state.boardSize};
+    }
 
-return (
-  <div className={"chess-board"}>
-    <Grid container spacing={1}>
-      <Grid item xs={1}>
-        {yLabels}
-      </Grid>
+    const boardStyle = {
+      position : 'relative',
+      overflow : 'hidden',
+      height : (this.state.boardSize + this.state.tileSize),
+      width : this.state.boardSize
+    };
 
-      <Grid item xs={10} style={boardStyle}>
-        {tiles}
-        {xLabels}
-      </Grid>
-    </Grid>
-  </div>
-);
-}
+    return (
+      <div className={"chess-board"}>
+        <Grid container spacing={0}>
+          <Grid item xs={1}>
+            {yLabels}
+          </Grid>
+          <Grid item xs={10} style={boardStyle}>
+            {tiles}
+            {xLabels}
+          </Grid>
+        </Grid>
+      </div>
+    );
+  }
 }
 
 Chess.propTypes = {
