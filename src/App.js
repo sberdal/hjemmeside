@@ -11,18 +11,6 @@ class App extends Component {
     super(props);
   }
 
-  goTo(route) {
-    this.props.history.replace(`/${route}`)
-  }
-
-  login() {
-    this.props.auth.login();
-  }
-
-  logout() {
-    this.props.auth.logout();
-  }
-
   render() {
     const { isAuthenticated } = this.props.auth;
     const {labels} = this.props;

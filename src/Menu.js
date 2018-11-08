@@ -90,6 +90,20 @@ class Menu extends React.Component {
     open : false,
   };
 
+  componentWillMount() {
+    this.setState({ profile : {} });
+    const { userProfile, getProfile } = this.props.auth;
+    if (this.props.auth.isAuthenticated()) {
+      if (!userProfile) {
+        getProfile((err, profile) => {
+          this.setState({ profile });
+        });
+      } else {
+        this.setState({ profile : userProfile });
+      }
+    }
+  }
+
   handleDrawerOpen = () => {
     this.setState({ open : true });
   };
@@ -107,10 +121,11 @@ class Menu extends React.Component {
   }
 
   render() {
-    const { classes, theme} = this.props;
+    const { classes, theme } = this.props;
     const labels = this.props.labels;
-    const {isAuthenticated} = this.props.auth;
-    console.log(isAuthenticated());
+    const { isAuthenticated } = this.props.auth;
+    const { profile } = this.state;
+
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -143,11 +158,18 @@ class Menu extends React.Component {
                   Home
                 </Typography>
               </Grid>
+              {isAuthenticated() && (
+                <Grid item>
+                  <a href="/profile">
+                    <img src={profile.picture} alt="profile" />
+                  </a>
+                </Grid>
+              )}
               <Grid item>
                 {!isAuthenticated() && (
-                <Button variant="contained" color="primary" onClick={this.login.bind(this)}>
-                  Login
-                </Button>
+                  <Button variant="contained" color="primary" onClick={this.login.bind(this)}>
+                    Login
+                  </Button>
                 )}
                 {isAuthenticated() && (
                   <Button variant="contained" color="primary" onClick={this.logout.bind(this)}>

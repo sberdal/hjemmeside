@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom'
+import { Route, Switch, Redirect} from 'react-router-dom'
 import Home from './pages/Home';
 import PlayChess from './pages/PlayChess';
 import labels from './i18n/labels';
@@ -7,6 +7,7 @@ import PageNotFound from './common/components/PageNotFound';
 import WelcomePage from './common/components/WelcomePage';
 import {auth, handleAuthentication} from './index';
 import Callback from './Callback/Callback';
+import Profile from './pages/Profile';
 
 
 
@@ -20,6 +21,14 @@ export default () => (
         handleAuthentication(props);
         return <Callback auth={auth} {...props} />
       }}/>
+
+      <Route
+        path="/profile"
+        render={props =>
+          !auth.isAuthenticated()
+          ? <Redirect to="/home" />
+          : <Profile auth={auth} {...props} />}
+      />
 
       <Route path="/home" render={(props) => <Home auth={auth} labels={labels.labels.home} {...props} />} />
       <Route path="/chess" render={(props) => <PlayChess auth={auth} labels={labels.labels.chess} {...props} />} />
