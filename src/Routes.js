@@ -5,6 +5,8 @@ import PlayChess from './pages/PlayChess';
 import labels from './i18n/labels';
 import PageNotFound from './common/components/PageNotFound';
 import WelcomePage from './common/components/WelcomePage';
+import {auth, handleAuthentication} from './index';
+import Callback from './Callback/Callback';
 
 
 
@@ -12,14 +14,17 @@ export default () => (
 
   <React.Fragment>
     <Switch>
-      <Route exact path="/" render={(props) => <WelcomePage {...props} labels={labels.labels.welcome_page} />} />
+      <Route exact path="/" render={(props) => <WelcomePage  auth={auth} labels={labels.labels.welcome_page} {...props} />} />
 
-      <Route path="/callback" render={(props) => <Home {...props} labels={labels.labels.home} />} />
-      <Route path="/home" render={(props) => <Home {...props} labels={labels.labels.home} />} />
-      <Route path="/chess" render={(props) => <PlayChess {...props} labels={labels.labels.chess} />} />
+      <Route path="/callback" render={(props) => {
+        handleAuthentication(props);
+        return <Callback auth={auth} {...props} />
+      }}/>
 
+      <Route path="/home" render={(props) => <Home auth={auth} labels={labels.labels.home} {...props} />} />
+      <Route path="/chess" render={(props) => <PlayChess auth={auth} labels={labels.labels.chess} {...props} />} />
 
-      <Route path="/**" render={(props) => <PageNotFound {...props} labels={labels.labels.page_not_found} />} />
+      <Route path="/**" render={(props) => <PageNotFound auth={auth} labels={labels.labels.page_not_found} {...props} />} />
     </Switch>
   </React.Fragment>
 );

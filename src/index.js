@@ -27,14 +27,20 @@ const persistedReducer = persistReducer(persistConfig, reducer);
 
 export const store = createStore(persistedReducer);
 
-export const authentication = new Auth();
+export const auth = new Auth();
+
+export const handleAuthentication = ({location}) => {
+  if (/access_token|id_token|error/.test(location.hash)) {
+    auth.handleAuthentication();
+  }
+}
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={<LoadingIndicator/>} persistor={persistStore(store)}>
     <BrowserRouter>
       <MuiThemeProvider theme={styles}>
-        <App labels={labels}/>
+        <App auth={auth} labels={labels}/>
       </MuiThemeProvider>
     </BrowserRouter>
     </PersistGate>

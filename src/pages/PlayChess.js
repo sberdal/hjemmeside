@@ -21,8 +21,8 @@ class PlayChess extends Component {
           <Chess />
         </Grid>
         <Grid item xs={2}>
-          <Button variant={'raised'} color={'primary'}>Start</Button>
-          <Button variant={'raised'} color={'secondary'} onClick={() => {}}>Undo move</Button>
+          <Button variant={'contained'} color={'primary'}>Start</Button>
+          <Button variant={'contained'} color={'secondary'} onClick={() => {}}>Undo move</Button>
         </Grid>
       </Grid>
     );

@@ -18,11 +18,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
-import Icon from '@material-ui/core/Icon';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/es/Grid/Grid';
-import { authentication } from './index';
+import App from './App'
 
 const drawerWidth = 240;
 
@@ -99,13 +98,19 @@ class Menu extends React.Component {
     this.setState({ open : false });
   };
 
-  logInHandler() {
-    authentication.login();
+  login() {
+    this.props.auth.login();
+  }
+
+  logout() {
+    this.props.auth.logout();
   }
 
   render() {
     const { classes, theme} = this.props;
-    const labels = this.props.labels.labels.menu;
+    const labels = this.props.labels;
+    const {isAuthenticated} = this.props.auth;
+    console.log(isAuthenticated());
     return (
       <div className={classes.root}>
         <CssBaseline />
@@ -139,9 +144,16 @@ class Menu extends React.Component {
                 </Typography>
               </Grid>
               <Grid item>
-                <Button color="inherit" onClick={this.logInHandler.bind(this)}>
+                {!isAuthenticated() && (
+                <Button variant="contained" color="primary" onClick={this.login.bind(this)}>
                   Login
                 </Button>
+                )}
+                {isAuthenticated() && (
+                  <Button variant="contained" color="primary" onClick={this.logout.bind(this)}>
+                    Logout
+                  </Button>
+                )}
               </Grid>
             </Grid>
           </Toolbar>

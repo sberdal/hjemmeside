@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
-import loading from './loading.svg';
+import loading from './pacman.svg';
 
 class Callback extends Component {
+
+componentDidMount(){
+  setTimeout(function () {
+    window.location.href = "/home";
+  }, 1000);
+}
+
   render() {
     const style = {
       position: 'absolute',
