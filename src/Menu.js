@@ -161,7 +161,7 @@ class Menu extends React.Component {
               {isAuthenticated() && (
                 <Grid item>
                   <a href="/profile">
-                    <img src={profile.picture} alt="profile" style={{borderRadius: '50%'}}/>
+                    <img src={profile.picture} alt="profile" style={{borderRadius: '50%'}} width={50} height={50}/>
                   </a>
                 </Grid>
               )}
