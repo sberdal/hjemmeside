@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b067a825-5956-47bf-adb6-438211589465" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/Auth/AuthConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Auth/AuthConfig.js" afterDir="false" />
-    </list>
+    <list default="true" id="b067a825-5956-47bf-adb6-438211589465" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -2197,7 +2193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542012573510</updated>
-      <workItem from="1542012575032" duration="4661000" />
+      <workItem from="1542012575032" duration="4887000" />
     </task>
     <task id="LOCAL-00001" summary="moved">
       <created>1542013573630</created>
@@ -2224,11 +2220,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4661000" />
+    <option name="totallyTimeSpent" value="4887000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -2241,10 +2236,10 @@
       <window_info anchor="bottom" id="Version Control" weight="0.32935324" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="CheckStyle" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32935324" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32935324" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973376" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="SciView" />
