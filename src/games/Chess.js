@@ -89,8 +89,6 @@ class ChessImpl extends Component {
     for (var i = 0; i < moves.length; i++) {
       squaresToHighlight.push(moves[i].to);
     }
-
-    this.highlightSquare(square, squaresToHighlight);
   };
 
   onMouseOutSquare = square => this.removeHighlightSquare(square);
