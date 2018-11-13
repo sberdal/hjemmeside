@@ -8,7 +8,7 @@ import WelcomePage from './common/components/WelcomePage';
 import {auth, handleAuthentication} from './index';
 import Callback from './Callback/Callback';
 import Profile from './pages/Profile';
-import Visit from './pages/Visit';
+import Travel from './pages/Travel';
 
 
 
@@ -34,7 +34,7 @@ export default () => (
 
       <Route path="/home" render={(props) => <Home auth={auth} labels={labels.labels.home} {...props} />} />
       <Route path="/chess" render={(props) => <PlayChess auth={auth} labels={labels.labels.chess} {...props} />} />
-      <Route path="/travel" render={(props) => <Visit auth={auth} labels={labels.labels.chess} {...props} />} />
+      <Route path="/travel" render={(props) => <Travel auth={auth} labels={labels.labels.chess} {...props} />} />
 
       <Route path="/**" render={(props) => <PageNotFound auth={auth} labels={labels.labels.page_not_found} {...props} />} />
     </Switch>

@@ -4,7 +4,7 @@ import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/es/Typography/Typography';
 
-class Visit extends Component {
+class Travel extends Component {
 
   componentDidMount() {
     document.getElementById("page_title").innerHTML = this.props.labels.page_title;
@@ -24,8 +24,8 @@ class Visit extends Component {
   }
 }
 
-Visit.propTypes = {
+Travel.propTypes = {
   labels : PropTypes.object.isRequired,
 };
 
-export default Visit;
+export default Travel;
