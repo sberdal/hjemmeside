@@ -18,6 +18,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
+import TravelIcon from '@material-ui/icons/Train';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/es/Grid/Grid';
@@ -202,6 +203,10 @@ class Menu extends React.Component {
             <ListItem button key={labels.chess} component={Link} to="/chess">
               <ListItemIcon className={classNames(classes.icon, 'fas fa-chess')} style={{ fontSize : 26 }} />
               <ListItemText primary={labels.chess} />
+            </ListItem>
+            <ListItem button key={labels.chess} component={Link} to="/travel">
+              <ListItemIcon><TravelIcon /></ListItemIcon>
+              <ListItemText primary={labels.travel} />
             </ListItem>
           </List>
           <Divider />

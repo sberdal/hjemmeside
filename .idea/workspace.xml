@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b067a825-5956-47bf-adb6-438211589465" name="Default" comment="added visit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b067a825-5956-47bf-adb6-438211589465" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Visit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Menu.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/common/components/WelcomePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/common/components/WelcomePage.js" afterDir="false" />
@@ -51,7 +51,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Routes.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Routes.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/frontend/src/Routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="289">
@@ -84,13 +84,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomePage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/common/components/WelcomePage.js">
+      <file leaf-file-name="Menu.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/src/Menu.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+            <state relative-caret-position="418">
+              <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
               <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#26#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -375,7 +375,7 @@
       <workItem from="1542116437963" duration="16000" />
       <workItem from="1542116482676" duration="48000" />
       <workItem from="1542116546095" duration="2000" />
-      <workItem from="1542116605869" duration="1691000" />
+      <workItem from="1542116605869" duration="1953000" />
     </task>
     <task id="LOCAL-00001" summary="moved">
       <created>1542013573630</created>
@@ -433,15 +433,35 @@
       <option name="project" value="LOCAL" />
       <updated>1542118229948</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added visit">
+      <created>1542118373510</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1542118373510</updated>
+    </task>
+    <task id="LOCAL-00010" summary="added visit">
+      <created>1542118543978</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1542118543978</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added visitwtf">
+      <created>1542118585857</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1542118585857</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15586000" />
+    <option name="totallyTimeSpent" value="15848000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -452,12 +472,12 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49893504" visible="true" weight="0.32935324" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49893504" visible="true" weight="0.32935324" />
       <window_info anchor="bottom" id="CheckStyle" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49893504" weight="0.32935324" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2603834" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32935324" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -485,7 +505,8 @@
     <MESSAGE value="moved" />
     <MESSAGE value="added travel" />
     <MESSAGE value="added visit" />
-    <option name="LAST_COMMIT_MESSAGE" value="added visit" />
+    <MESSAGE value="added visitwtf" />
+    <option name="LAST_COMMIT_MESSAGE" value="added visitwtf" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/frontend/src/pages/PlayChess.js">
@@ -729,13 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/Menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/common/components/WelcomePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -814,6 +828,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/Menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="202" column="33" selection-start-line="202" selection-start-column="33" selection-end-line="202" selection-end-column="33" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

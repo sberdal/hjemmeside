@@ -6,7 +6,8 @@ export default {
       login : 'Login',
       logout : 'Logout',
       home : 'Home',
-      chess : 'Play chess'
+      chess : 'Play chess',
+      travel : 'Travel'
     },
     chess : {
       page_title: 'Chess'
